@@ -100,11 +100,18 @@ def hook2(plot, element):
     plot.state.x_range = Range1d(-10, 10, bounds="auto")
     plot.state.toolbar.active_drag = None
     plot.state.toolbar.active_scroll = None
+    plot.state.yaxis.major_tick_line_color = None
+    plot.state.yaxis.minor_tick_line_color = None
+    plot.state.yaxis.major_label_text_color = None
     
 def hook3(plot, element):
     plot.state.y_range = Range1d(-10, 10, bounds="auto")
     plot.state.toolbar.active_drag = None
     plot.state.toolbar.active_scroll = None
+    plot.state.xaxis.axis_line_color = None
+    plot.state.xaxis.major_tick_line_color = None
+    plot.state.xaxis.minor_tick_line_color = None
+    plot.state.xaxis.major_label_text_color = None
     
 @pn.depends(mean_x.param.value, mean_y.param.value, var_x.param.value, var_y.param.value, cov_x_y.param.value)
 def create_scatter(m_x, m_y, var_x, var_y, cov_x_y):
