@@ -126,12 +126,12 @@ def create_scatter(m_x, m_y, var_x, var_y, cov_x_y):
                             width=600,
                             xlim=(-10,10),
                             ylim=(-10,10),
-                            xlabel=r"x",
-                            ylabel=r"y")
+                            xlabel=r"𝑥",
+                            ylabel=r"𝑦")
     scatter.opts(hooks=[hook])
-    kde_x = sample.hvplot(kind="kde", y="x", hover=False, ylabel="", xlabel=r"x", width=600, height=125)
+    kde_x = sample.hvplot(kind="kde", y="x", hover=False, ylabel="", xlabel=r"𝑥", width=600, height=125)
     kde_x.opts(hooks=[hook2])
-    kde_y = sample.hvplot(kind="kde", y="y", hover=False, ylabel="", xlabel=r"y", width=125, height=400)
+    kde_y = sample.hvplot(kind="kde", y="y", hover=False, ylabel="", xlabel=r"𝑦", width=125, height=400)
     kde_y.opts(hooks=[hook3])
     comp = scatter << kde_y << kde_x
     comp.opts(toolbar=None)
