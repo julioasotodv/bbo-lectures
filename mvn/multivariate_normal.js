@@ -100,7 +100,7 @@ def hook2(plot, element):
     plot.state.x_range = Range1d(-10, 10, bounds="auto")
     plot.state.toolbar.active_drag = None
     plot.state.toolbar.active_scroll = None
-	plot.state.yaxis.axis_line_color = None
+    plot.state.yaxis.axis_line_color = None
     plot.state.yaxis.major_tick_line_color = None
     plot.state.yaxis.minor_tick_line_color = None
     plot.state.yaxis.major_label_text_color = None
